@@ -8,7 +8,7 @@ namespace PSConstruct.DBClasses
 {
     public class BDMotherBoard
     {
-        public int DBMotherBoardId { get; set; }
+        public int BDMotherBoardId { get; set; }
         public string MDName { get; set; }
         public string CPUsocket { get; set; }
         public string GPUsocket { get; set; }
