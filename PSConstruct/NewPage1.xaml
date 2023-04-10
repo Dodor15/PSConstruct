@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PSConstruct.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <Label 
+            Text="Меню для парса в Базу"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <HorizontalStackLayout>
+            <Label Text="Ссылка: "/>
+            <Entry x:Name="URL"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Что это такое?"/>
+            <Picker
+                x:Name="whoIs"
+                HorizontalOptions="Center"
+                ItemsSource="{Binding Compl}"/>
+        </HorizontalStackLayout>
+        <Button
+            Text="Запарсить"
+            x:Name="ToParceButton"
+            Clicked="ToParceButton_Clicked"/>
+        <Label x:Name="ResultLabel"/>
+    </VerticalStackLayout>
+</ContentPage>

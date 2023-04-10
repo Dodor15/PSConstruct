@@ -9,12 +9,11 @@ namespace PSConstruct.DBClasses
     public class BDMotherBoard
     {
         public int BDMotherBoardId { get; set; }
-        public string MDName { get; set; }
-        public string CPUsocket { get; set; }
-        public string GPUsocket { get; set; }
-        public string RAMsocket { get; set; }
+        public string MDName { get; set; } = string.Empty;
+        public string CPUsocket { get; set; } = string.Empty;
+        public string GPUsocket { get; set; } = string.Empty;
+        public string RAMsocket { get; set; } = string.Empty;
         public int CountRAM { get; set; }
         
-
     }
 }

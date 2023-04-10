@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="7.0.4" />
@@ -60,6 +61,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="NewPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="StartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

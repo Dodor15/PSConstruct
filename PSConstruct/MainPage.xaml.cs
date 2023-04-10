@@ -7,7 +7,7 @@ public partial class MainPage : ContentPage
 	public List<string> GPU { get; set; }
 	public List<string> RAM { get; set; }
 	public List<string> HDD { get; set; }
-	public List<string> powerUnit { get; set; }
+	public List<string> PowerUnit { get; set; }
 
 	public MainPage()
 	{
@@ -19,7 +19,7 @@ public partial class MainPage : ContentPage
 		GPU = new List<string> { "Radeon 570 8GB", "Geforce RTX 4090" };
 		RAM = new List<string> { "Apacer", "ADATA XPG Lancer" };
 		HDD = new List<string> { "Samsung EVO 560 500GB"};
-		powerUnit = new List<string> {"DA700" };
+		PowerUnit = new List<string> {"DA700"};
 
 		//Выключение кнопок, чтоб раньше заполнения не нажимались
 		ButtonMatherBoard.IsEnabled= false;

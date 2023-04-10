@@ -14,4 +14,9 @@ public partial class StartPage : ContentPage
 		await Navigation.PushModalAsync(new MainPage());
 	}
 
+    private async void ToParceButton_Clicked(object sender, EventArgs e)
+    {
+		await Navigation.PushModalAsync(new NewPage1());
+    }
+
 }

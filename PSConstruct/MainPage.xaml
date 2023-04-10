@@ -72,7 +72,7 @@
                 </Grid.ColumnDefinitions>
                 
                 <Label Text="Плок питания" Grid.Column="0"/>
-                <Picker x:Name="PickerPowerUnit" SelectedIndexChanged="PickerPowerUnit_SelectedIndexChanged" Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding powerUnit}"/>
+                <Picker x:Name="PickerPowerUnit" SelectedIndexChanged="PickerPowerUnit_SelectedIndexChanged" Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding PowerUnit}"/>
                 <Button x:Name="ButtonPowerUnit" HorizontalOptions="Center" Text="?" Grid.Column="2"/>
             </Grid>
 

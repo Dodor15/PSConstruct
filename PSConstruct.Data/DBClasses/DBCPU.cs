@@ -9,8 +9,8 @@ namespace PSConstruct.DBClasses
     public class DBCPU
     {
         public int DBCPUId { get; set; }
-        public string CPUName { get; set; }
-        public string CPUsocket { get; set; }
+        public string CPUName { get; set; } = string.Empty;
+        public string CPUsocket { get; set; } = string.Empty;
         public int CoreCount { get; set; }
         public int StreamsCount { get; set; }
         public double CoreHz { get; set; }

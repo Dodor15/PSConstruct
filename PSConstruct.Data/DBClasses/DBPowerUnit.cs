@@ -9,7 +9,7 @@ namespace PSConstruct.DBClasses
     public class DBPowerUnit
     {
         public int DBPowerUnitId { get; set; }
-        public string PowerUnitName { get; set; }
+        public string PowerUnitName { get; set; } = string.Empty;
         public int Power { get; set; }
     }
 }
