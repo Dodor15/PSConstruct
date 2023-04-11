@@ -15,6 +15,9 @@ namespace PSConstruct.DBClasses
         public DbSet<BDMotherBoard> BDMotherBoards { get; set; }
         public DbSet<DBCPU> DBCPUs { get; set; }
         public DbSet<DBGPU> DBGPUs { get; set; }
+        public DbSet<DBHDD> DBHDDs { get; set; }
+        public DbSet<DBRAM> DBRAMs { get; set; }
+        public DbSet<DBPowerUnit> DBPowerUnits { get; set; }
 
         string connect = "Data Source=config.db";
 

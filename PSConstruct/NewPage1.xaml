@@ -25,5 +25,6 @@
             x:Name="ToParceButton"
             Clicked="ToParceButton_Clicked"/>
         <Label x:Name="ResultLabel"/>
+        <Button x:Name="AddDataBase" Text="Если все правильно то нажимай и суй в базу" Clicked="AddDataBase_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

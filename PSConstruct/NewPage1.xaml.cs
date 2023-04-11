@@ -119,7 +119,7 @@ public partial class NewPage1 : ContentPage
 
                         if (tableData[i, 1].Length > 22)
                         {
-                            string socket = tableData[i, 1].Remove(22);
+                            string socket = tableData[i, 1].Remove(tableData[i, 1].Length - 16);
                             ResultLabel.Text += socket + "\n";
                             MBCPUsocket = socket;
                         }
@@ -426,11 +426,92 @@ public partial class NewPage1 : ContentPage
         switch (whoIs.SelectedIndex)
         {
             case 0:
-                using(var context = new ConfigContext())
+                using (var context = new ConfigContext())
+                {
+                    BDMotherBoard MB = new BDMotherBoard
+                    {
+                        MDName = this.MBName,
+                        CountRAM = this.CountRAM,
+                        CPUsocket = this.CPUsocket,
+                        GPUsocket = this.GPUsocket,
+                        RAMsocket = this.RAMsocket
+                    };
+                    context.BDMotherBoards.Add(MB);
+                    context.SaveChanges();
+                }
                 break;
             case 1:
+                using (var context = new ConfigContext())
+                {
+                    DBCPU cpu = new DBCPU
+                    {
+                        CoreCount = this.CoreCount,
+                        CoreHz = this.CoreHz,
+                        CPUName = this.CPUName,
+                        CPUsocket = this.CPUsocket,
+                        GraphicsCore = this.GraphCore,
+                        StreamsCount = this.StreamCount,
+                        PowerEat = this.CPUPowerEat
+                    };
+                    context.DBCPUs.Add(cpu);
+                    context.SaveChanges();
+                }
                 break;
             case 2:
+                using (var context = new ConfigContext())
+                {
+                    DBGPU gpu = new DBGPU
+                    {
+                        bandwidth = GPUSpeed,
+                        GPUMemoryCount = this.GPUMemoryCount,
+                        GPUName = this.GPUName,
+                        GPUsocket = this.GPUsocket,
+                        MemoryType = this.GPUMemoryType,
+                        PowerEat = this.GPUPowerEat
+                    };
+                    context.DBGPUs.Add(gpu);
+                    context.SaveChanges();
+                }
+                break;
+            case 3:
+                using (var context = new ConfigContext())
+                {
+                    DBRAM ram = new DBRAM
+                    {
+                        RamMemoryCount = this.RAMMemoryCount,
+                        RamMemorySpeed = this.RAMMemorySpeed,
+                        RAMName = this.RAMName,
+                        RAMsocket = this.RAMsocket
+                    };
+                    context.DBRAMs.Add(ram);
+                    context.SaveChanges();
+                }
+                break;
+            case 4:
+                using (var context = new ConfigContext())
+                {
+                    DBHDD hdd = new DBHDD
+                    {
+                        HDDMemoryCount = this.HDDMemoryCount,
+                        HDDName = this.HDDName,
+                        HDDPowerEat = this.HDDPowerEat,
+                        MemorySpeed = this.HDDMemorySpeed
+                    };
+                    context.DBHDDs.Add(hdd);
+                    context.SaveChanges();
+                }
+                break;
+            case 5:
+                using (var context = new ConfigContext())
+                {
+                    DBPowerUnit pu = new DBPowerUnit
+                    {
+                        PowerUnitName = this.PowerUnitName,
+                        Power = this.Power
+                    };
+                    context.DBPowerUnits.Add(pu);
+                    context.SaveChanges();
+                }
                 break;
 
         }
