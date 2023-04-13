@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PSConstruct.MainPage"
+             Title="MainPage">
+
+    <ScrollView BackgroundColor="Gray">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Мат. плата" Grid.Column="0"/>
+                <Picker x:Name="PikcerMatherBoard" SelectedIndexChanged="PikcerMatherBoard_SelectedIndexChanged" Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding MatherBoard}"/>
+                <Button x:Name="ButtonMatherBoard" Clicked="ButtonMatherBoard_Clicked" Text="?" HorizontalOptions="Center" Grid.Column="2"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Центр. Процесcор" Grid.Column="0"/>
+                <Picker x:Name="PickerCPU" SelectedIndexChanged="PickerCPU_SelectedIndexChanged" Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding CPU}"/>
+                <Button x:Name="ButtonCPU" Clicked="ButtonCPU_Clicked" Text="?" HorizontalOptions="Center" Grid.Column="2"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Видеокарта" Grid.Column="0"/>
+                <Picker x:Name="PickerGPU" SelectedIndexChanged="PickerGPU_SelectedIndexChanged"  Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding GPU}"/>
+                <Button x:Name="ButtonGPU" Clicked="ButtonGPU_Clicked" Text="?" HorizontalOptions="Center" Grid.Column="2"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Оп. память" Grid.Column="0"/>
+                <Picker x:Name="PickerRAM" SelectedIndexChanged="PickerRAM_SelectedIndexChanged" Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding RAM}"/>
+                <Button x:Name="ButtonRAM" Clicked="ButtonRAM_Clicked" HorizontalOptions="Center" Text="?" Grid.Column="2"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Накопитель" Grid.Column="0"/>
+                <Picker x:Name="PickerHDD" SelectedIndexChanged="PickerHDD_SelectedIndexChanged" Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding HDD}"/>
+                <Button x:Name="ButtonHDD" Clicked="ButtonHDD_Clicked" Text="?" HorizontalOptions="Center" Grid.Column="2"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Плок питания" Grid.Column="0"/>
+                <Picker x:Name="PickerPowerUnit" SelectedIndexChanged="PickerPowerUnit_SelectedIndexChanged" Grid.Column="1" MinimumWidthRequest="200" ItemsSource="{Binding PowerUnit}"/>
+                <Button x:Name="ButtonPowerUnit" HorizontalOptions="Center" Text="?" Grid.Column="2"/>
+            </Grid>
+
+            <Button
+                x:Name="Back"
+                Text="back button"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Back_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSConstruct", "PSConstruct\PSConstruct.csproj", "{EA744440-117D-437E-B992-82A8551A6FBE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{48C02111-85FC-48A2-9EE2-E0A32B4D8524} = {48C02111-85FC-48A2-9EE2-E0A32B4D8524}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSConstruct.Data", "PSConstruct.Data\PSConstruct.Data.csproj", "{77D9CB28-2815-4061-97B9-D19CACCAC969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSConstruct.Data", "PSConstruct.Data\PSConstruct.Data.csproj", "{77D9CB28-2815-4061-97B9-D19CACCAC969}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSConstruct.Migrator", "PSConstruct.Migrator\PSConstruct.Migrator.csproj", "{48C02111-85FC-48A2-9EE2-E0A32B4D8524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSConstruct.Migrator", "PSConstruct.Migrator\PSConstruct.Migrator.csproj", "{48C02111-85FC-48A2-9EE2-E0A32B4D8524}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

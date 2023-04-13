@@ -432,9 +432,9 @@ public partial class NewPage1 : ContentPage
                     {
                         MDName = this.MBName,
                         CountRAM = this.CountRAM,
-                        CPUsocket = this.MBCPUsocket,
-                        GPUsocket = this.MBGPUsocket,
-                        RAMsocket = this.MBRAMsocket
+                        CPUsocket = this.CPUsocket,
+                        GPUsocket = this.GPUsocket,
+                        RAMsocket = this.RAMsocket
                     };
                     context.BDMotherBoards.Add(MB);
                     await context.SaveChangesAsync();
